@@ -1,1 +1,173 @@
-<h1> ello ello ello </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet " href="main.css">
+
+
+  <style>
+    .image-container {
+      position: relative;
+      display: inline-block;
+      height: 100vh;
+      /* width: 100vh;*/
+    }
+
+    .image-container img {
+      width: 80%;
+      height: 110%;
+      mask-image: linear-gradient(.25turn, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 1) 0%);
+      -webkit-mask-image: linear-gradient(.25turn, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 1) 100%);
+    
+    
+    
+    }
+    #about {
+      position: absolute;
+        left: 65%;
+        top: 20%;
+        margin: 0 auto;
+    }
+    #esat {
+        width: 0;
+        font-size: 300%;
+        border-right: 3px solid;
+        width: max-content;
+        animation: typing 2s steps(90, end),
+                   blink-caret .75s step-end infinite;
+        white-space: nowrap;
+        overflow: hidden;
+        
+    }
+
+    @keyframes typing {
+        from { width: 0 }
+        to { width: max-content }
+    }
+
+
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        60% { border-color: black; }
+    }
+    .anitro {
+        opacity: 0;
+        padding-top: 40px;
+        transform: translateY(20px);
+        animation: fadeInBottom 1s ease forwards;
+        animation-delay: 9s; 
+        font-size: large;
+    }
+
+    @keyframes fadeInBottom {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .midsection {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      gap: 2rem;
+      margin-top: 2rem;
+      padding: 2rem;
+      max-width: 800px;
+      animation: fadeInBottom 1s ease forwards;
+      transform: translateY(20px);
+      animation-delay: 3s;
+    }
+    .vision {
+
+    }
+    .contdiv {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+  </style>
+  <title>Image Fade Effect</title>
+</head>
+<body><div class="container">
+  <div class="image-container">
+    
+    
+    <img src="caspar_david_friedrich_-_wanderer_above_the_sea_of_fog.jpg" alt="Image with faded edges">
+   
+</div>
+<div id="about">
+<div class="item" ><span id="esat"></span></div>
+
+<div class="item"> <p class="anitro"> Wanderer </p></div>
+<div class="anitro" > <a class="button" href="#Work">My Work /</a> <a class="button" href="#Vision" >Vision /</a> <a class="button" href="#Contact">Contact</a>      </div>
+
+</div>
+
+<div class="midsection">
+<div class="midsection"><h1 id="Work"> My Work</h1> <p> hiiii</p></div>
+  
+  <div class="contdiv">
+  <div class="itemdiv"></div> 
+  <div class="itemdiv"></div>
+  <div class="itemdiv"></div>
+  <div class="itemdiv"></div>
+</div>
+
+</div>
+
+
+
+
+
+
+</div>
+<div class="container">
+  <div class="vision"><h1 id="Vision"> Vision</h1> <p> hiiii</p></div>
+    
+    <div>
+   
+  </div>
+  
+  </div>
+<div class="container">
+  <div class=""><h1 id="Contact"> Contact</h1> <p> hiiii</p></div>
+    
+
+  </div>
+  
+  </div>
+<script>
+  const text = document.getElementById('esat');
+  const content = "Welcome, \n I'm Esad Kocaturk";
+  text.innerHTML = '';
+  let i = 0;
+
+  function typeWriter() {
+      if (i < content.length) {
+        if (content.charAt(i) === "\n") {
+          text.innerHTML += "<br>";
+          
+        }
+        else {
+          text.innerHTML += content.charAt(i);
+        }
+        i++;
+        setTimeout(typeWriter, 300);
+      }
+  }
+
+  // Add this before closing body tag
+  window.onload = typeWriter;
+</script>
+
+</body>
+</html>
