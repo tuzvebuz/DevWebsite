@@ -1,0 +1,59 @@
+
+
+
+.libre-caslon-display-regular {
+    font-family: "Libre Caslon Display", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+body {
+    font-family: "Libre Caslon Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+.container { 
+    display: flex;
+    flex-direction: row;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.item {
+    flex: 0 0 35%;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.contdiv {
+  display: flex;
+  flex: row;
+
+}
+.itemdiv {
+  display: flex;
+  width: 400px;
+  height: 100px;
+  border: double;
+  margin: 20px;
+}
+
+.button {
+  color: black;
+  text-decoration: none;
+}
+
+.button:hover{
+  background-color: black;  
+  color: white;
+}
+.button:visited {
+
+}
